@@ -371,9 +371,6 @@ nav .btn{font-size:1.05rem;padding:.4rem 1.1rem}
 .formpage .wrap{max-width:900px}
 .formpage .soon-back{display:inline-block;margin:0 0 1.5rem}
 .formpage .soon-title,.formpage .soon-lede{text-align:left;margin-left:0}
-.draft-banner{background:#FFF7E0;color:#5A4500;border:1px solid #F0D98A;border-radius:14px;padding:1rem 1.25rem;margin:0 0 1.75rem;font-size:1rem}
-:root[data-theme="dark"] .draft-banner{background:#3A3010;color:#F5E6B3;border-color:#6B5A1E}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .draft-banner{background:#3A3010;color:#F5E6B3;border-color:#6B5A1E}}
 .checkgrid{display:grid;grid-template-columns:1fr;gap:.5rem 1.5rem}
 @media (min-width:640px){.checkgrid{grid-template-columns:1fr 1fr}}
 .fsec .check{display:flex;align-items:center;gap:.5rem;font-size:1rem;margin-bottom:.4rem}
@@ -1084,7 +1081,6 @@ footer a{color:#9CCBF5}
       <a class="soon-back" href="#challenge-coin">← Back to the Challenge Coin Program</a>
       <h1 id="rc-h" class="soon-title">Register my Challenge Coin</h1>
       <p class="soon-lede">Earned a coin? Add it to your record anytime during the year. Registering a coin is not the same as applying for a scholarship. When a scholarship cycle opens, your verified coins will already be on file.</p>
-      <p class="draft-banner"><strong>Draft for review.</strong> This form isn’t live yet. Before launch it needs a secure system that checks serial numbers, sends coach confirmations, and keeps student information private.</p>
       <form class="form-card" id="register-form" novalidate>
         <fieldset class="fsec"><legend>About you</legend><div class="fgrid">
           <label>Your full name<input name="student" required autocomplete="name"></label>
@@ -1210,7 +1206,7 @@ footer a{color:#9CCBF5}
     var need=['student','school','team','serial','how'].some(function(n){return !regf[n].value.trim();});
     if(need||!EMAIL.test(regf.email.value.trim())||!regf.edition.value){st.textContent='Please fill in your name, email, school, team, coin edition, serial number, and how you earned it.';return;}
     if(!gbox.hidden&&(!EMAIL.test(regf.guardian_email.value.trim())||!regf.guardian_phone.value.trim())){st.textContent='To consider your story for sharing, please add a parent or guardian’s email and phone.';return;}
-    st.textContent='Thanks! This form is a draft for review and isn’t saving registrations yet.';
+    st.textContent='Thanks! Online coin registration opens soon. Your coin isn’t registered yet, so please keep it and check back.';
   });
   function route(first){
     var h=location.hash.replace('#',''),v='home',target=null;
